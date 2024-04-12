@@ -106,11 +106,6 @@ export default class Player {
 
         ctx.restore();
 
-        const hitboxX = this.x + (image.width - Player.width) / 2;
-        const hitboxY = this.y + (image.height - Player.height) /2;
-
-        ctx.fillStyle = "rgba(0,0,255, 0.5)"; //hitbox color atm
-        ctx.fillRect(hitboxX, hitboxY, Player.width, Player.height);
 
     }
 

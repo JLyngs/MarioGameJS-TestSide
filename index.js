@@ -46,21 +46,7 @@ import Player from "./Player.js";
         
     }
 
-    function drawFloor() {
-        var floorImg = document.getElementById("floorImage")
-        var floorImgPat = ctx.createPattern(floorImg, null)
-        ctx.fillStyle = floorImgPat
-        ctx.fillRect(floor.x, floor.y, floor.width, floor.height);
-    }
 
-    function drawPlatforms() {
-        var platformImg = document.getElementById("platformImg")
-        var platformImgPat = ctx.createPattern(platformImg, null)
-        ctx.fillStyle = platformImgPat;
-        platforms.forEach(platform => {
-            ctx.fillRect(platform.x, platform.y, platform.width = 25, platform.height = 25,);
-        });
-    }
     
 
     
@@ -70,32 +56,8 @@ import Player from "./Player.js";
 
     const background = new Background(canvas.width, canvas.height);
     const player = new Player(canvas.width, canvas.height);
-    const floor = {
-        x: 0,
-        y: canvas.height - 36,
-        width: 6000,
-        height: 36,
-    };
-    const platforms = [
-        { x: 650, y: 450},
-        { x: 675, y: 450},
-        { x: 700, y: 450},
-        { x: 725, y: 450},
-        { x: 750, y: 450},
 
-
-        { x: 800, y: 350},
-        { x: 825, y: 350},
-        { x: 850, y: 350},
-        { x: 875, y: 350},
-
-        { x: 925, y: 450},
-        { x: 950, y: 450},
-        { x: 975, y: 450},
-        { x: 1000, y: 450},
-        { x: 1025, y: 450},
-
-    ]
+ 
 
     
     function game() {
@@ -103,8 +65,6 @@ import Player from "./Player.js";
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         background.draw(ctx);
         background.update();
-        /*drawFloor();*/
-        drawPlatforms();
         player.update();
         player.draw(ctx);
 

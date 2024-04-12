@@ -4,32 +4,28 @@
     <meta charset="UTF-8">
     <meta name="Mario" content="width=device-width, initial-scale=1.0">
     <title>Mario</title>
+
+
+    <script src="index.js" type="module" ></script>
+    <script src="Player.js" type="module" ></script>
+    <script src="Libary/p5.js" type="text/javascript" ></script>
+    
     <style>
-        body{
-            background-color: rgb(52, 52, 95);
-            overflow: hidden;
-            
-        }
-        #canvas {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 5px solid white;
-            background-color: #A1CAE2;
-        }
-        #backgroundImage, #floorImage, #platformImg{
-            display: none;
+
+        body, html {
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
         }
     </style>
 </head>
 <body>
-    <canvas id="canvas"></canvas>
-    <img id="floorImage" src="images/Floor.png">
-    <img id="backgroundImage" src="images/BG.png">
-    <img id="platformImg" src="images/platform.png">
-    <script src="index.js" type="module" ></script>
-    <script src="Player.js" type="module" ></script>
+
+
+
 
 
 </body>
